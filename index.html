@@ -1,35 +1,391 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Greener Weddings | Irish-Inspired Wedding Photography</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;500&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Lightbox CSS (for gallery) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Sample Page</h1>
-    </header>
-    <main>
-        <section>
-            <h2>About This Page</h2>
-            <p>This is a simple HTML page to demonstrate the structure of an HTML document.</p>
-            <h3>Patrick is now Ricardo</h3>
-        </section>
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li>Header Section</li>
-                <li>Main Content Area</li>
-                <li>Footer Section</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Sample Page. All rights reserved.</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">
+                    <i class="fas fa-leaf text-success me-2"></i>
+                    <span class="fw-bold">Greener</span>Weddings
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count badge bg-success">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success ms-lg-3" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-7">
+                    <h1 class="display-3 fw-bold mb-4">
+                        Capturing Love, <span class="text-success">Naturally</span>
+                    </h1>
+                    <p class="lead mb-5">
+                        Irish-inspired wedding photography that tells your unique story with authenticity, warmth, and
+                        the natural beauty of the Emerald Isle.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="gallery.html" class="btn btn-success btn-lg me-3">
+                            <i class="fas fa-images me-2"></i>View Gallery
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-calendar-check me-2"></i>Book Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-image"></div>
+    </section>
+
+    <!-- Featured Galleries Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Featured Weddings</h2>
+                    <p class="section-subtitle">A glimpse into the moments we've been honored to capture</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Gallery 1 -->
+                <div class="col-md-4">
+                    <div class="gallery-card">
+                        <a href="images/gallery1.jpg" data-lightbox="featured" data-title="Castle Wedding - Kilkenny">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                class="img-fluid" alt="Castle Wedding">
+                        </a>
+                        <div class="gallery-info">
+                            <h5>Castle Wedding</h5>
+                            <p>Kilkenny • Traditional</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 2 -->
+                <div class="col-md-4">
+                    <div class="gallery-card">
+                        <a href="images/gallery2.jpg" data-lightbox="featured" data-title="Beach Ceremony - Galway">
+                            <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                class="img-fluid" alt="Beach Wedding">
+                        </a>
+                        <div class="gallery-info">
+                            <h5>Beach Ceremony</h5>
+                            <p>Galway • Boho Style</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 3 -->
+                <div class="col-md-4">
+                    <div class="gallery-card">
+                        <a href="images/gallery3.jpg" data-lightbox="featured" data-title="Forest Elopement - Wicklow">
+                            <img src="https://images.unsplash.com/photo-1519677100203-5f5a1c56b7b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                class="img-fluid" alt="Forest Wedding">
+                        </a>
+                        <div class="gallery-info">
+                            <h5>Forest Elopement</h5>
+                            <p>Wicklow • Intimate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="gallery.html" class="btn btn-outline-success btn-lg">
+                    View Full Gallery <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Our Photography Packages</h2>
+                    <p class="section-subtitle">Tailored collections for your perfect day</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Package 1 -->
+                <div class="col-md-4">
+                    <div class="package-card text-center p-4 h-100">
+                        <div class="package-icon mb-4">
+                            <i class="fas fa-clover text-success fa-3x"></i>
+                        </div>
+                        <h4 class="package-name">The Clover</h4>
+                        <p class="package-price">€1,200</p>
+                        <ul class="package-features list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>6 Hours Coverage</li>
+                            <li><i class="fas fa-check text-success me-2"></i>300+ Edited Photos</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Online Gallery</li>
+                            <li><i class="fas fa-times text-muted me-2"></i>Engagement Session</li>
+                        </ul>
+                        <button class="btn btn-outline-success add-to-cart" data-package="Clover" data-price="1200">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="col-md-4">
+                    <div class="package-card text-center p-4 h-100 featured-package">
+                        <div class="package-icon mb-4">
+                            <i class="fas fa-shamrock text-success fa-3x"></i>
+                        </div>
+                        <h4 class="package-name">The Shamrock</h4>
+                        <p class="package-price">€2,500</p>
+                        <ul class="package-features list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Full Day Coverage</li>
+                            <li><i class="fas fa-check text-success me-2"></i>500+ Edited Photos</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Engagement Session</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Custom Photo Album</li>
+                        </ul>
+                        <button class="btn btn-success add-to-cart" data-package="Shamrock" data-price="2500">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="col-md-4">
+                    <div class="package-card text-center p-4 h-100">
+                        <div class="package-icon mb-4">
+                            <i class="fas fa-tree text-success fa-3x"></i>
+                        </div>
+                        <h4 class="package-name">The Emerald</h4>
+                        <p class="package-price">€3,800</p>
+                        <ul class="package-features list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Two-Day Coverage</li>
+                            <li><i class="fas fa-check text-success me-2"></i>800+ Edited Photos</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Premium Photo Album</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Drone Coverage</li>
+                        </ul>
+                        <button class="btn btn-outline-success add-to-cart" data-package="Emerald" data-price="3800">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="services.html" class="btn btn-link text-success">
+                    View All Packages & Details <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Happy Couples</h2>
+                    <p class="section-subtitle">What our couples say about their experience</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="testimonial-slider">
+                        <div class="testimonial text-center p-5">
+                            <div class="testimonial-image mb-4">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                    class="rounded-circle" alt="Couple">
+                            </div>
+                            <p class="testimonial-text lead mb-4">
+                                "Greener Weddings captured our castle wedding perfectly. The photos are magical and
+                                truly reflect the Irish spirit of our day!"
+                            </p>
+                            <h5 class="testimonial-author">Sarah & Mark</h5>
+                            <p class="testimonial-location">Kilkenny Castle Wedding</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-success text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="mb-3">Ready to Capture Your Love Story?</h3>
+                    <p class="mb-0">Let's create timeless memories together. Book your free consultation today.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="contact.html" class="btn btn-light btn-lg">
+                        <i class="fas fa-envelope me-2"></i>Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="mb-4">
+                        <i class="fas fa-leaf text-success me-2"></i>
+                        <span class="fw-bold">Greener</span>Weddings
+                    </h4>
+                    <p>Irish-inspired wedding photography capturing love stories with authenticity and natural beauty.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-pinterest fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-white-50 text-decoration-none">Gallery</a>
+                        </li>
+                        <li class="mb-2"><a href="services.html" class="text-white-50 text-decoration-none">Services</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt text-success me-2"></i>
+                            Dublin, Ireland
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone text-success me-2"></i>
+                            +353 1 234 5678
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope text-success me-2"></i>
+                            hello@greenerweddings.ie
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 mb-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-white-50">Get wedding tips and special offers</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-success" type="button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="bg-secondary">
+
+            <div class="row pt-3">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white-50">&copy; 2023 Greener Weddings. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="login.html" class="text-white-50 text-decoration-none me-3">Login</a>
+                    <a href="signup.html" class="text-white-50 text-decoration-none me-3">Sign Up</a>
+                    <a href="contact.html" class="text-white-50 text-decoration-none">Contact</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+    <!-- Initialize Lightbox -->
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'albumLabel': "Image %1 of %2"
+        });
+    </script>
 </body>
+
 </html>
-
-
