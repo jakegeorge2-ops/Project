@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azure Bay Hotel – News & Offers</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Azure Bay Hotel</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <nav class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign up</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="blog-page">
+        <!-- Hero / intro -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1 class="mb-3">News & Offers</h1>
+                <p class="lead mb-2">
+                    Stay up to date with the latest news, seasonal offers, and events at Azure Bay Hotel.
+                </p>
+                <p class="mb-0">
+                    Browse recent posts or filter by category to find what interests you.
+                </p>
+            </div>
+        </section>
+
+        <!-- Controls -->
+        <section class="blog-controls">
+            <div class="container">
+                <div class="row g-3 align-items-center">
+                    <div class="col-md-4">
+                        <label for="blogCategory" class="form-label small mb-1">Category</label>
+                        <select id="blogCategory" class="form-select form-select-sm">
+                            <option value="all">All categories</option>
+                            <option value="offers">Special offers</option>
+                            <option value="events">Events</option>
+                            <option value="news">Hotel news</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="blogSearch" class="form-label small mb-1">Search posts</label>
+                        <input type="text" id="blogSearch" class="form-control form-control-sm"
+                            placeholder="Type a keyword (e.g. spa, music, summer)..." />
+                    </div>
+                    <div class="col-md-3 text-md-end">
+                        <p id="blogCount" class="small mb-0 text-muted">
+                            Showing all posts
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Posts list -->
+        <section class="blog-section">
+            <div class="container">
+                <div class="row g-4" id="blogList">
+                    <!-- Post 1 -->
+                    <div class="col-md-6 blog-item" data-category="offers" data-title="Summer spa packages">
+                        <article class="card blog-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-center mb-2 small text-muted">
+                                    <span>Special offers</span>
+                                    <time datetime="2025-07-05">5 July 2025</time>
+                                </div>
+                                <h2 class="h5 card-title">Summer Spa Packages</h2>
+                                <p class="card-text flex-grow-1">
+                                    Treat yourself to ocean-inspired spa treatments and unwind with our limited-time
+                                    summer spa packages for hotel guests.
+                                </p>
+                                <a href="#" class="stretched-link text-decoration-none small">
+                                    Read more
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="col-md-6 blog-item" data-category="events" data-title="Live music every Friday">
+                        <article class="card blog-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-center mb-2 small text-muted">
+                                    <span>Events</span>
+                                    <time datetime="2025-06-20">20 June 2025</time>
+                                </div>
+                                <h2 class="h5 card-title">Live Music Every Friday</h2>
+                                <p class="card-text flex-grow-1">
+                                    Join us in the lounge each Friday for live music, cocktails, and sunsets over Azure
+                                    Bay.
+                                </p>
+                                <a href="#" class="stretched-link text-decoration-none small">
+                                    Read more
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Post 3 -->
+                    <div class="col-md-6 blog-item" data-category="news" data-title="New rooftop pool opening">
+                        <article class="card blog-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-center mb-2 small text-muted">
+                                    <span>Hotel news</span>
+                                    <time datetime="2025-05-15">15 May 2025</time>
+                                </div>
+                                <h2 class="h5 card-title">New Rooftop Pool</h2>
+                                <p class="card-text flex-grow-1">
+                                    We’re excited to unveil our newly renovated rooftop pool, now open to all guests
+                                    staying at Azure Bay Hotel.
+                                </p>
+                                <a href="#" class="stretched-link text-decoration-none small">
+                                    Read more
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Post 4 -->
+                    <div class="col-md-6 blog-item" data-category="offers" data-title="Midweek stay discounts">
+                        <article class="card blog-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-center mb-2 small text-muted">
+                                    <span>Special offers</span>
+                                    <time datetime="2025-04-10">10 April 2025</time>
+                                </div>
+                                <h2 class="h5 card-title">Midweek Stay Discounts</h2>
+                                <p class="card-text flex-grow-1">
+                                    Enjoy quieter stays and lower rates with our midweek offers on selected room types,
+                                    Sunday to Thursday.
+                                </p>
+                                <a href="#" class="stretched-link text-decoration-none small">
+                                    Read more
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Post 5 -->
+                    <div class="col-md-6 blog-item" data-category="news" data-title="Sustainability initiatives">
+                        <article class="card blog-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-center mb-2 small text-muted">
+                                    <span>Hotel news</span>
+                                    <time datetime="2025-03-01">1 March 2025</time>
+                                </div>
+                                <h2 class="h5 card-title">Sustainability at Azure Bay</h2>
+                                <p class="card-text flex-grow-1">
+                                    Learn more about how we’re reducing waste, supporting local suppliers, and caring
+                                    for our coastline.
+                                </p>
+                                <a href="#" class="stretched-link text-decoration-none small">
+                                    Read more
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Post 6 -->
+                    <div class="col-md-6 blog-item" data-category="events" data-title="Holiday season events">
+                        <article class="card blog-card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-center mb-2 small text-muted">
+                                    <span>Events</span>
+                                    <time datetime="2024-12-01">1 December 2024</time>
+                                </div>
+                                <h2 class="h5 card-title">Holiday Season at Azure Bay</h2>
+                                <p class="card-text flex-grow-1">
+                                    From festive dinners to New Year’s celebrations, discover our programme of seasonal
+                                    events.
+                                </p>
+                                <a href="#" class="stretched-link text-decoration-none small">
+                                    Read more
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3">
+        <div class="container text-center small">
+            &copy; 2025 Azure Bay Hotel. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azure Bay Hotel – Rooms</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Azure Bay Hotel</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <nav class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign up</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="py-5">
+        <!-- Intro -->
+        <section class="pt-4 pt-md-5">
+            <div class="container">
+                <h1 class="mb-3">Our Rooms</h1>
+                <p class="text-muted mb-4 rooms-intro">
+                    Choose from a selection of rooms designed for different types of stays
+                    – from cosy city rooms to spacious family suites with sea views.
+                </p>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section class="pb-3">
+            <div class="container">
+                <form id="roomsFilterForm" class="row g-3 align-items-end">
+                    <div class="col-md-4">
+                        <label for="roomTypeFilter" class="form-label">Room type</label>
+                        <select id="roomTypeFilter" class="form-select">
+                            <option value="all">All types</option>
+                            <option value="sea">Sea view</option>
+                            <option value="city">City view</option>
+                            <option value="family">Family / suite</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="priceFilter" class="form-label">Max price per night</label>
+                        <select id="priceFilter" class="form-select">
+                            <option value="0">No limit</option>
+                            <option value="150">Up to €150</option>
+                            <option value="200">Up to €200</option>
+                            <option value="250">Up to €250</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4 text-md-end">
+                        <button type="button" id="resetFilters" class="btn btn-outline-secondary me-2">
+                            Reset
+                        </button>
+                        <span class="small text-muted d-block d-md-inline mt-2 mt-md-0" id="roomsCountInfo">
+                            Showing all rooms
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Rooms list -->
+        <section class="py-4">
+            <div class="container">
+                <div class="row g-4" id="roomsList">
+                    <!-- Room 1 -->
+                    <div class="col-md-6 col-lg-4 room-item" data-type="sea" data-price="180">
+                        <article class="card room-card h-100">
+                            <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                class="card-img-top" alt="Deluxe sea view room with balcony" />
+                            <div class="card-body d-flex flex-column">
+                                <h2 class="card-title h5 mb-1">Deluxe Sea View</h2>
+                                <p class="room-tags mb-2">
+                                    <span class="badge bg-primary">Sea view</span>
+                                    <span class="badge bg-secondary">2 guests</span>
+                                </p>
+                                <p class="card-text flex-grow-1">
+                                    Spacious room with king bed, private balcony and panoramic views of Azure Bay.
+                                </p>
+                                <p class="fw-bold mb-2">€180 / night</p>
+                                <button class="btn btn-sm btn-outline-secondary toggle-details mb-2">
+                                    View room details
+                                </button>
+                                <div class="room-extra small">
+                                    <ul class="mb-2">
+                                        <li>Complimentary breakfast</li>
+                                        <li>Rainfall shower & luxury toiletries</li>
+                                        <li>Desk & high-speed Wi-Fi</li>
+                                    </ul>
+                                </div>
+                                <a href="booking.html" class="btn btn-sm btn-primary mt-auto">
+                                    Book this room
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Room 2 -->
+                    <div class="col-md-6 col-lg-4 room-item" data-type="city" data-price="120">
+                        <article class="card room-card h-100">
+                            <img src="https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                class="card-img-top" alt="Modern standard room with city view" />
+                            <div class="card-body d-flex flex-column">
+                                <h2 class="card-title h5 mb-1">Standard Room</h2>
+                                <p class="room-tags mb-2">
+                                    <span class="badge bg-info text-dark">City view</span>
+                                    <span class="badge bg-secondary">2 guests</span>
+                                </p>
+                                <p class="card-text flex-grow-1">
+                                    Bright, modern room with queen bed, ideal for business or short stays.
+                                </p>
+                                <p class="fw-bold mb-2">€120 / night</p>
+                                <button class="btn btn-sm btn-outline-secondary toggle-details mb-2">
+                                    View room details
+                                </button>
+                                <div class="room-extra small">
+                                    <ul class="mb-2">
+                                        <li>Work desk & ergonomic chair</li>
+                                        <li>Smart TV with streaming apps</li>
+                                        <li>Tea & coffee facilities</li>
+                                    </ul>
+                                </div>
+                                <a href="booking.html" class="btn btn-sm btn-primary mt-auto">
+                                    Book this room
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Room 3 -->
+                    <div class="col-md-6 col-lg-4 room-item" data-type="family" data-price="230">
+                        <article class="card room-card h-100">
+                            <img src="https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                class="card-img-top" alt="Spacious family suite" />
+                            <div class="card-body d-flex flex-column">
+                                <h2 class="card-title h5 mb-1">Family Suite</h2>
+                                <p class="room-tags mb-2">
+                                    <span class="badge bg-success">Family</span>
+                                    <span class="badge bg-secondary">Up to 4 guests</span>
+                                </p>
+                                <p class="card-text flex-grow-1">
+                                    Two-bedroom suite with living area and kitchenette – perfect for families or groups.
+                                </p>
+                                <p class="fw-bold mb-2">€230 / night</p>
+                                <button class="btn btn-sm btn-outline-secondary toggle-details mb-2">
+                                    View room details
+                                </button>
+                                <div class="room-extra small">
+                                    <ul class="mb-2">
+                                        <li>Separate kids’ bedroom</li>
+                                        <li>Dining table & kitchenette</li>
+                                        <li>Complimentary welcome snacks</li>
+                                    </ul>
+                                </div>
+                                <a href="booking.html" class="btn btn-sm btn-primary mt-auto">
+                                    Book this room
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- You can copy & adapt more .room-item blocks if you want more rooms -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3">
+        <div class="container text-center small">
+            &copy; 2025 Azure Bay Hotel. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

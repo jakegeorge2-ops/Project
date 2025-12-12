@@ -1,0 +1,421 @@
+/* Base styles */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    padding-top: 4.5rem;
+    /* offset for fixed navbar */
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    min-height: 75vh;
+    color: #fff;
+    background-image: url("https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.25));
+}
+
+/* Make sure hero content sits above overlay */
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Quick booking box */
+.quick-booking {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 1rem;
+    border-radius: 0.75rem;
+}
+
+/* Room cards */
+.room-card {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1.25rem 2rem rgba(0, 0, 0, 0.16);
+}
+
+/* About info box */
+.about-box {
+    background: #ffffff;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+/* Small tweaks */
+footer {
+    margin-top: auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767.98px) {
+    .hero {
+        text-align: left;
+    }
+
+    .quick-booking {
+        background: rgba(0, 0, 0, 0.65);
+    }
+}
+
+/* ---------- ROOMS PAGE ---------- */
+
+.rooms-intro {
+    max-width: 40rem;
+}
+
+/* tags like Sea view / Family */
+.room-tags .badge {
+    margin-right: 0.35rem;
+}
+
+/* hide extra details by default */
+.room-extra {
+    display: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* ---------- ROOM DETAIL PAGE ---------- */
+
+.room-detail-page {
+    background-color: #f8f9fa;
+}
+
+.room-hero {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.room-gallery .room-main-img {
+    max-height: 420px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.room-gallery .room-thumb {
+    width: 110px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.room-gallery .room-thumb:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.room-side-card {
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+    border-radius: 0.75rem;
+}
+
+.room-detail-form .form-label {
+    font-weight: 500;
+}
+
+/* ---------- LOGIN / AUTH PAGE ---------- */
+
+.auth-page {
+    min-height: calc(100vh - 56px - 48px);
+    /* viewport minus navbar & footer */
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    background: radial-gradient(circle at top left, #f0f5ff, #f8f9fa);
+}
+
+.auth-wrapper {
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.auth-intro {
+    padding-right: 1rem;
+}
+
+.auth-card {
+    border-radius: 0.9rem;
+    box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.08);
+}
+
+.auth-card .form-label {
+    font-weight: 500;
+}
+
+#loginFeedback {
+    min-height: 1.2rem;
+    /* to avoid layout shift when message appears */
+}
+
+/* ---------- SIGN UP PAGE ---------- */
+
+#signupFeedback {
+    min-height: 1.2rem;
+    /* prevents layout jumping when message appears */
+}
+
+/* ---------- ABOUT PAGE ---------- */
+
+.about-page {
+    padding-top: 5rem;
+    /* space for fixed navbar */
+    background-color: #f8f9fa;
+}
+
+/* Top intro section */
+.about-hero {
+    padding: 3rem 0 2.5rem;
+    background: linear-gradient(135deg, #f0f5ff, #f8f9fa);
+}
+
+.about-hero h1 {
+    font-weight: 600;
+}
+
+.about-highlight {
+    background-color: #ffffff;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.05);
+}
+
+/* General sections */
+.about-section {
+    padding: 3rem 0;
+}
+
+.about-values li+li {
+    margin-top: 0.5rem;
+}
+
+/* Stats cards */
+.about-stat {
+    background-color: #ffffff;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.05);
+}
+
+.about-stat-number {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Service/feature boxes */
+.about-service-box {
+    background-color: #ffffff;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.05);
+}
+
+/* Small responsive tweaks */
+@media (max-width: 767.98px) {
+    .about-hero {
+        text-align: left;
+    }
+
+    .about-page {
+        padding-top: 4.75rem;
+    }
+}
+
+/* ---------- CONTACT PAGE ---------- */
+
+.contact-page {
+    padding-top: 5rem;
+    /* space for fixed navbar */
+    background-color: #f8f9fa;
+}
+
+.contact-hero {
+    padding: 3rem 0 2.5rem;
+    background: linear-gradient(135deg, #f0f5ff, #f8f9fa);
+}
+
+.contact-summary {
+    background-color: #ffffff;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.06);
+}
+
+.contact-section {
+    padding: 3rem 0;
+}
+
+.contact-card {
+    border-radius: 0.9rem;
+    box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.08);
+}
+
+.contact-card .form-label {
+    font-weight: 500;
+}
+
+#contactFeedback {
+    min-height: 1.2rem;
+    /* prevent layout jump when message appears */
+}
+
+.contact-map {
+    background-color: #e7ecf5;
+}
+
+@media (max-width: 767.98px) {
+    .contact-page {
+        padding-top: 4.75rem;
+    }
+}
+/* ---------- GALLERY PAGE ---------- */
+
+.gallery-page {
+  padding-top: 5rem; /* space for fixed navbar */
+  background-color: #f8f9fa;
+}
+
+.gallery-hero {
+  padding: 3rem 0 2rem;
+  background: linear-gradient(135deg, #f0f5ff, #f8f9fa);
+}
+
+.gallery-section {
+  padding: 2.5rem 0 3rem;
+}
+
+.gallery-filters .btn {
+  font-size: 0.9rem;
+}
+
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.05);
+}
+
+.gallery-img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.04);
+  filter: brightness(0.9);
+}
+
+.gallery-caption {
+  padding: 0.4rem 0.75rem 0.5rem;
+}
+/* ---------- BLOG / NEWS PAGE ---------- */
+
+.blog-page {
+  padding-top: 5rem; /* space for fixed navbar */
+  background-color: #f8f9fa;
+}
+
+.blog-hero {
+  padding: 3rem 0 2rem;
+  background: linear-gradient(135deg, #f0f5ff, #f8f9fa);
+}
+
+.blog-controls {
+  padding: 1.5rem 0 0.5rem;
+}
+
+.blog-section {
+  padding: 2.5rem 0 3rem;
+}
+
+.blog-card {
+  border-radius: 0.9rem;
+  box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.07);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1.1rem 2.2rem rgba(0, 0, 0, 0.12);
+}
+
+.blog-card .card-title {
+  font-weight: 600;
+}
+/* ---------- SINGLE BLOG POST PAGE ---------- */
+
+.blog-post-page {
+  padding-top: 5rem; /* space for fixed navbar */
+  background-color: #f8f9fa;
+}
+
+.blog-post-hero {
+  padding: 2.75rem 0 1.5rem;
+  background: linear-gradient(135deg, #f0f5ff, #f8f9fa);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.blog-post-section {
+  padding: 2.5rem 0 3rem;
+}
+
+.blog-article {
+  background-color: #ffffff;
+  padding: 2rem 2.25rem;
+  border-radius: 0.9rem;
+  box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.06);
+}
+
+.blog-article p + p {
+  margin-top: 0.75rem;
+}
+
+.blog-article h2 {
+  margin-top: 1.5rem;
+}
+
+.blog-quote {
+  border-left: 4px solid #0d6efd;
+  padding-left: 1rem;
+  font-style: italic;
+  background-color: #f3f6ff;
+}
+
+.blog-sidebar {
+  margin-left: auto;
+}
+
+.blog-sidebar-card {
+  background-color: #ffffff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  .blog-article {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .blog-post-section .container {
+    display: block;
+  }
+
+  .blog-article,
+  .blog-sidebar {
+    max-width: 100%;
+  }
+}
